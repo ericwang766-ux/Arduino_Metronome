@@ -2,14 +2,9 @@
 
 A digital metronome built with Arduino that provides adjustable tempo, selectable time signatures, audible beat accents, and an LCD-based user interface.
 
-## Overview
+## Why I Built This
 
-This project is a custom-built digital metronome designed for music practice. It combines an Arduino, LCD display, buzzer, potentiometer, and physical buttons to create a standalone metronome with an interactive menu system.
-
-The user can adjust the tempo using physical buttons or the Arduino Serial Monitor, select different time signatures, and start or stop the metronome. The buzzer provides an audible beat, with accents used to distinguish the beginning of each measure.
-
-The project was developed as a hands-on electronics and programming project, combining hardware prototyping with embedded software and user-interface design.
-
+I've played in orchestra for 7 years and have had a deep interest in music and electrical engineering. I wanted to build something that combines both passions in one, so I created a metronome. It was something I could customize, understand completely at the hardware and software level, and improve over time. This project became my introduction to embedded systems: writing timing-critical code, designing a menu-driven UI on a 4-button interface, and debugging real circuits instead of just simulations.
 ## Features
 - Adjustable tempo using physical buttons
 - Serial tempo input through the Arduino Serial Monitor
@@ -43,25 +38,11 @@ The tempo can also be entered directly through the Arduino Serial Monitor.
 
 ## How It Works
 
-The Arduino is responsible for generating the timing of the metronome and keeping track of the current beat within each measure.
+Tempo — The Arduino calculates the interval between beats from the selected BPM and triggers the buzzer at that interval. Tempo is adjustable via buttons or Serial Monitor input.
 
-### Tempo
+Time signatures — A menu system lets the user select a time signature, which determines how many beats occur per measure and where the primary accent falls. For example, in 4/4 time, beat one is accented so the musician can track the start of each measure:
 
-The tempo can be increased or decreased using the left and right buttons. The user can also enter a tempo through the Serial Monitor.
-
-The Arduino uses the selected tempo to determine the interval between beats and activates the buzzer at the appropriate times.
-
-### Time Signatures
-
-The metronome includes a menu system that allows the user to select a time signature.
-
-The selected time signature determines how many beats are contained within each measure and where the primary accent occurs.
-
-For example, in 4/4 time:
-
-ONE — two — three — four
-
-The first beat receives the primary accent, making it easier for the musician to keep track of the beginning of each measure.
+ONE - two - three - four
 
 ### User Interface
 
@@ -96,18 +77,7 @@ Arduino-Metronome/
 └── README.md
 ## Current Status
 
-The current prototype includes the core functionality of the metronome:
-
-Adjustable tempo
-Serial tempo input
-Start/stop control
-LCD interface
-Menu navigation
-Time signature selection
-Audible beat generation
-Beat accents
-Physical button controls
-LCD display adjustment
+Core functionality is complete and working on a breadboard prototype: adjustable tempo, time signature selection, LCD interface, menu navigation, audible beats with accents, and full button control.
 
 The project is currently being developed as a hardware prototype using a breadboard and jumper wires.
 
@@ -135,8 +105,5 @@ This project has provided hands-on experience with:
 - Menu and user-interface design
 - Circuit prototyping
 - Debugging hardware and software
-# Future Development
-
-As development continues, this repository will document the progression from the initial breadboard prototype toward a more refined and complete metronome.
 
 Built with Arduino as an electronics and embedded-systems project.
