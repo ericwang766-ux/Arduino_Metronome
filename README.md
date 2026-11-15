@@ -1,7 +1,7 @@
 # Arduino Metronome
 
 A digital metronome built with Arduino that provides adjustable tempo, selectable time signatures, audible beat accents, and an LCD-based user interface.
-
+![Metronome running at 84 BPM](docs/overview.jpg)
 ## Why I Built This
 
 I've played in orchestra for 7 years and have a deep interest in both music and electrical engineering. I wanted to build something that combined the two, so I made a metronome I could customize, understand completely at the hardware and software level, and improve over time. This project was my introduction to embedded systems: writing timing-critical code, designing a menu-driven interface around four buttons, and debugging a real circuit.
