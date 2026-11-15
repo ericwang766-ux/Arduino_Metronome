@@ -26,6 +26,9 @@ I learned how each component (buttons, LCD, buzzer) works from documentation and
 | 4 push buttons | User input and menu navigation |
 | Breadboard | Circuit prototyping |
 | Jumper wires | Electrical connections |
+
+![Close-up of the wiring](docs/wiring.jpg)
+
 ## User Controls
 Control	Function
 | Control | Function |
@@ -45,6 +48,8 @@ Tempo — The Arduino calculates the interval between beats from the selected BP
 Time signatures — A menu system lets the user select a time signature, which determines how many beats occur per measure and where the primary accent falls. For example, in 4/4 time, beat one is accented so the musician can track the start of each measure:
 
 ONE - two - three - four
+
+![Menu screen showing time signature selection](docs/lcd.jpg)
 
 ### User Interface
 
