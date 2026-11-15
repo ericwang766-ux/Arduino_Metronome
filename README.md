@@ -27,7 +27,7 @@ I learned how each component (buttons, LCD, buzzer) works from documentation and
 | Breadboard | Circuit prototyping |
 | Jumper wires | Electrical connections |
 
-![Close-up of the wiring](docs/wiring.jpg)
+![Close-up of the wiring](docs/wiring.jpeg)
 
 ## User Controls
 Control	Function
@@ -49,7 +49,7 @@ Time signatures — A menu system lets the user select a time signature, which d
 
 ONE - two - three - four
 
-![Menu screen showing time signature selection](docs/lcd.jpg)
+![Menu screen showing time signature selection](docs/lcd.jpeg)
 
 ### User Interface
 
