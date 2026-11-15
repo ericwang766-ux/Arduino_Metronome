@@ -4,7 +4,9 @@ A digital metronome built with Arduino that provides adjustable tempo, selectabl
 
 ## Why I Built This
 
-I've played in orchestra for 7 years and have had a deep interest in music and electrical engineering. I wanted to build something that combines both passions in one, so I created a metronome. It was something I could customize, understand completely at the hardware and software level, and improve over time. This project became my introduction to embedded systems: writing timing-critical code, designing a menu-driven UI on a 4-button interface, and debugging real circuits instead of just simulations.
+I've played in orchestra for 7 years and have a deep interest in both music and electrical engineering. I wanted to build something that combined the two, so I made a metronome I could customize, understand completely at the hardware and software level, and improve over time. This project was my introduction to embedded systems: writing timing-critical code, designing a menu-driven interface around four buttons, and debugging a real circuit.
+
+I learned how each component (buttons, LCD, buzzer) works from documentation and examples, then designed the overall system myself, including the menu logic, state handling, and beat timing.
 ## Features
 - Adjustable tempo using physical buttons
 - Serial tempo input through the Arduino Serial Monitor
@@ -62,15 +64,12 @@ The project is programmed using the Arduino programming environment and C/C++.
 
 The software handles:
 
-Beat timing
-Tempo calculation
-Beat counting
-Time signature selection
-Accent generation
-LCD output
-Button input
-Menu navigation
-Serial input
+- Beat timing and tempo calculation
+- Beat counting and accent generation
+- Time signature selection
+- LCD output
+- Button input and menu navigation
+- Serial input
 # Project Structure
 Arduino-Metronome/
 ├── Arduino-Metronome.ino
