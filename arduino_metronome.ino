@@ -60,7 +60,6 @@ int mode = 0;
 static int BPM_MODE = 0;
 static int MENU_MODE = 3;
 static int TIMESIG_MODE = 1;
-static int VOLUME_MODE = 4;
 
 byte cursorChar[] = {B01000, B01100, B01110, B01111, B01111, B01110, B01100, B01000};
 
@@ -125,7 +124,6 @@ int checkButtons(){
   if(digitalRead(left)== LOW){
     leftPress = true; 
     if(leftPress != previousLeft) changePressed = millis();
-    //previousLeft = true; 
     changeElapsed = millis() - changePressed;
     return 1;
   }else{
@@ -136,7 +134,6 @@ int checkButtons(){
   if(digitalRead(right) == LOW){
     rightPress = true; 
     if(rightPress != previousRight) changePressed = millis();
-    //previousRight = true; 
     changeElapsed = millis() - changePressed;
     return 2;
   }else{
@@ -146,9 +143,6 @@ int checkButtons(){
 
   if(digitalRead(onOff) == LOW){
     buttonPress = true;
-    //if(buttonPress != previousPress) angePressed = millis();
-    //previousPress = true;
-    //changeElapsed = millis() - changePressed;
     return 4;
   }else{
     buttonPress = false;
@@ -229,11 +223,6 @@ void printMetronome(){
       if(tempo>=100)lcd.print(tempo);
       else lcd.print(zero + tempo);
 }
-/*int beats[] = {2, 3, 4, 6};
-int chooseSig = 2;
-int accent = NOTE_G6;
-int beat = 1;
-*/
 void startMetronome(){
   time = setMetronome(tempo);
   int currBeat = beat;
