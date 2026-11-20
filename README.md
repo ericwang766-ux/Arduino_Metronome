@@ -49,19 +49,12 @@ Time signatures — A menu system lets the user select a time signature, which d
 
 ONE - two - three - four
 
-![Menu screen showing time signature selection](docs/lcd.jpeg)
 
 ### User Interface
 
-The LCD provides feedback to the user by displaying the current settings and menu options.
+The LCD shows the current settings and menu options. The left and right buttons change values, and the Start/Stop button controls playback and confirms menu selections.
 
-The four physical buttons provide navigation and control:
-
-Left/right buttons change values
-Set confirms or selects options
-Start/Stop controls the metronome
-
-The potentiometer is used to adjust the LCD display setting.
+![Menu screen showing time signature selection](docs/lcd.jpeg)
 
 ## Software
 
@@ -75,6 +68,7 @@ The software handles:
 - LCD output
 - Button input and menu navigation
 - Serial input
+  
 # Project Structure
 Arduino-Metronome/
 ├── Arduino-Metronome.ino
@@ -96,18 +90,10 @@ Potential future improvements include:
 - Improve the menu interface
 # What I Learned
 
-This project has provided hands-on experience with:
+A problem I ran into and how I solved it: I wanted the tempo to increase by exactly one BPM on a quick tap, but increase faster when the button was held down. At first, a single tap changed the value many times. The code loop runs thousands of times per second, so one short press was registered on every pass while the button was down. I solved this with a variable that records whether the button was already pressed on the previous pass, so the value changes only once, at the moment of a press. Holding the button longer then increases the value more quickly.
 
-- Arduino programming
-- Embedded C/C++
-- Digital electronics
-- Analog inputs
-- Push-button inputs
-- LCD interfaces
-- Serial communication
-- Timing and beat generation
-- Menu and user-interface design
-- Circuit prototyping
-- Debugging hardware and software
+A design decision I made: I chose to use the start/pause to act as the "select" button for the menu. This is because I only wanted to have four buttons to keep the controls very simple. In order to do this, I needed to keep track of the screen the user was on in order to change the purpose of the button. 
+
+What I would do differently: I repeated the same “pressed once” flag logic separately for each of the four buttons, which added many extra variables. Next time I would write one reusable function so I would only require need to create one variable and change it after each button press. 
 
 Built with Arduino as an electronics and embedded-systems project.
